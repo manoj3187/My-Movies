@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Movie Collection</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css">
+
+        <script src="./js/index.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    </head>
+
+    <body onload="bb()">
+        
+
+        <div id="main">
+            <div data-role="page" id='second'>
+                <div id="secondheader">
+                     <div id="secondicon"><a href="#first" data-transition="slidefade"><i class='fas fa-user-alt' style='font-size:28px;color:white'> <br> <p id="op">Account</p></i>
+                    </a></div>
+                    
+                    <div id= "nav">
+           
+                        <div id="current"><a href="#second" data-transition="none" data-icon="plus">Add film</a>
+
+                        </div>
+            
+                        <div id="notcurrent">   <a href="#third" data-transition="fade" data-icon="home">My Films</a>
+                        </div>     
+            
+                    </div>
+                </div>
+
+                <div id="secondinfo">
+                    Welcome to MY MOVIES app!  
+                </div>
+                <div id="secondform">
+                    <input id="secondtitle"type="text" placeholder="Enter title">
+                    <input id="secondrating" type="text" placeholder="Enter rating in %">
+                    <button id="secondbutton" onclick="createFilm()">Submit</button>
+                </div>
+                
+                <div id='secondfooter'>
+                    &copy;2021, MY MOVIES
+                    </div>
+             </div>
+
+             <div  data-role="page" id='first' >
+                <a data-rel="back" data-transition="slide">&#8592;</a>
+                <div id='firsttitle'>My Movies</div>
+                <div id="firsticon"><i class='fas fa-user-alt' style='font-size:48px;color:white'></i></div>
+                <input id="firstinput" type="text" placeholder="enter username" onfocus="xx()">
+                    <button id="firstbutton" onclick="login()">Login</button>
+                
+            </div>
+        
+
+        <div data-role="page" id='third' onload="getilms()">
+            <div id="secondheader">
+                 <div id="secondicon"><a href="#first" data-transition="slide"><i class='fas fa-user-alt' style='font-size:28px;color:white'> <br> <p id="op">Account</p></i>
+                </a></div>
+                
+                <div id= "nav">
+       
+                    <div id="notcurrent"><a href="#second" data-transition="fade" data-direction="reverse" data-icon="plus">Add film</a>
+
+                    </div>
+        
+                    <div id="current">   <a href="#third" data-transition="none" data-icon="home">My Films</a>
+                    </div>     
+        
+                </div>
+            </div>
+<div id="reload" onclick="getFilms()">Reload</div>
+            <div id="thirdmain">
+               
+            </div>
+
+            
+            
+            <div id='secondfooter'>
+                &copy;2021, MY MOVIES
+                </div>
+         </div>
+
+
+         <div  data-role="page" id='four' >
+            <a id="gbf" data-rel="back" data-transition="slide">&#8592;</a>
+
+            <div id="edf">
+
+                <p id="uuu">The godfather</p> 
+                <br><br>
+                <input id="upin" type="text" placeholder="enter new rating">
+                <button id="ratingbutton" onclick="changeFilms()">Update</button>
+
+            </div>
+            
+        </div>   
+        
+        
+    </div>
+
+        <!-- <div data-role="page" id="add">
+            <header data-role="header" data-theme="b">
+                <h1>Movie Collection</h1>
+            </header>
+            <div data-role="navbar">
+                <ul>
+                    <li> <a href="#add" data-transition="none" data-icon="plus">Add film</a>
+
+                    </li>
+                    <li>
+                        <a href="#home" data-transition="slide" data-icon="home">My Films</a></li>
+                       
+                </ul>
+            </div>
+
+            <div data-role="content">
+                <h3>Add Film</h3>
+                <form id="addForm">
+                    <label for="addfilms">Enter Title</label>
+                    <input type="text" id="addfilms">
+
+                    <label for="addfilms">Enter Rating</label>
+                    <input type="number" id="addrating">
+
+                    <button id="submitAdd" class="ui-btn ui-btn-b ui-corner-all" onclick="getFilms()">Submit</button> 
+
+                    
+
+                </form>
+            </div>
+
+            <div data-role="footer" data-theme="b">
+                <h4>Movie Collection &copy; 2021 </h4>
+            </div>
+        </div>
+        
+        <div data-role="page" id="home">
+            <header data-role="header" data-theme="b">
+                <h1>Movie Collection</h1>
+            </header>
+            <div data-role="navbar">
+                <ul>
+                    <li> <a href="#add" data-transition="slide" data-direction="reverse" data-icon="plus">Add film</a>
+
+                    </li>
+                    <li>
+                        <a href="#home" data-transition="none" data-icon="home">My Films</a></li>
+                       
+                </ul>
+            </div>
+
+            <div data-role="content">
+                <h3>Welcome to Movie Collection</h3>
+                <p>With this app, you can add new movies to your collection and rate them</p>
+
+                <ul id="stats" data-role="listview" data-filter="true" data-filter-placeholder="Filter movies by title or rating" data-inset="true"></ul> 
+            </div>
+            <table id="myTable">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+
+            <div data-role="footer" data-theme="b">
+                <h4>Movie Collection &copy; 2021 </h4>
+            </div>
+        </div>
+
+         -->
+    </body>
+</html>

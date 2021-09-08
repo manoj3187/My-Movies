@@ -1,0 +1,262 @@
+#first {
+  background-color: #00c6a6;
+
+  width: 100vw;
+}
+
+#second {
+  background-color: rgb(230, 230, 230);
+  width: 100vw;
+}
+
+#third {
+  background-color: rgb(230, 230, 230);
+  width: 100vw;
+}
+
+#four {
+  background-color: #00c6a6;
+
+  width: 100vw;
+}
+
+#first a,
+#four a {
+  color: white;
+  padding-left: 20px;
+  padding-top: 20px;
+  font-size: 40px;
+  text-decoration: none;
+}
+#films {
+  width: 90%;
+  min-height: 80px;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  margin-left: auto;
+  background-color: white;
+  border-radius: 5px;
+  margin-right: auto;
+  /* border: solid 1px black; */
+  margin-top: 10px;
+}
+#edf {
+  background-color: rgb(230, 230, 230);
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+
+  height: 100px;
+}
+#edf p {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 25px;
+}
+
+#edf > .ui-input-text {
+  width: 60vw;
+  outline: none;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#ratingbutton {
+  width: 60vw;
+  outline: none;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#innerfilms1 {
+  display: grid;
+  grid-template-rows: 60% 40%;
+}
+#innerfilms2 {
+  display: grid;
+  grid-template-rows: 70% 30%;
+}
+#innerrating {
+  padding-left: 20px;
+  font-size: 17px;
+  font-weight: 500;
+}
+#innertitle {
+  padding-left: 20px;
+  font-size: 25px;
+  font-weight: 500;
+}
+#editrating {
+  font-size: 13px;
+  padding-right: 10px;
+}
+
+#editrating:visited {
+  color: none;
+}
+#reload {
+  text-align: right;
+  padding-right: 30px;
+  padding-top: 20px;
+  text-decoration: underline;
+  color: black;
+  font-size: 13px;
+}
+
+#logininfo {
+  color: white;
+  /* border: 1px solid black; */
+  font-size: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#logininfo p {
+  text-decoration: underline;
+  font-size: 20px;
+  text-align: center;
+}
+#firsttitle {
+  padding-top: 130px;
+
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+#firsticon {
+  /* width: 12.5v÷w; */
+  height: 30px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 1px solid rgb(66, 64, 64); */
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#first > .ui-input-text {
+  border-radius: 20px;
+  width: 50vw;
+  margin: 30px auto;
+  margin-bottom: 10px;
+  outline: none;
+  box-shadow: none;
+}
+
+#op {
+  font-size: 12px;
+}
+
+#firstbutton {
+  border-radius: 20px;
+  width: 50vw;
+  margin: 0 auto;
+  height: 4vh;
+  padding-bottom: 30px;
+  outline: none;
+  box-shadow: none;
+}
+
+#secondheader {
+  background-color: #00c6a6;
+}
+
+#secondicon {
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#nav {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+#current {
+  text-align: center;
+  border-bottom: solid 5px white;
+}
+
+#notcurrent {
+  text-align: center;
+}
+#current a,
+#notcurrent a {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#current a:visited,
+#notcurrent a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+#secondinfo {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  font-size: 16px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+}
+
+#secondform {
+  padding-top: 30px;
+}
+
+#secondform > .ui-input-text {
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  height: 45px;
+  outline: none;
+  box-shadow: none;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#secondrating:focus,
+#secondtitle:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#secondform input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#secondbutton {
+  margin-top: 25px;
+  width: 70vw;
+  margin-left: auto;
+  margin-right: auto;
+  /* border-radius: 20px; */
+  background-color: #00c6a6;
+
+  color: white;
+}
+#secondbutton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+#secondfooter {
+  background-color: #00c6a6;
+  color: white;
+  margin-top: 100px;
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 50px;
+}
